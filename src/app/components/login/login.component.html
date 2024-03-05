@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="panel border bg-white">
+
+
+                <div class="panel-body ">
+                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" formControlName="email"
+                                placeholder="Email" [ngClass]="{'is-invalid': controls.email.errors && controls.email.touched}">
+                            <small id="email" class="form-text text-muted" *ngIf="controls.email.errors?.required && controls.email.touched">
+                                Lütfen email alanını boş geçmeyiniz.
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Şifre</label>
+                            <input  formControlName="password"  type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password" [ngClass]="{'is-invalid': controls.password.errors && controls.password.touched}">
+                            <small id="password" class="form-text text-muted" *ngIf="controls.password.errors?.required && controls.password.touched">
+                                Lütfen şifre alanını boş geçmeyiniz.
+                            </small>
+                        </div>
+                       
+                        <button type="submit" class="buttonLogin">Giriş Yap</button>
+                        
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

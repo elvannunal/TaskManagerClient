@@ -1,0 +1,28 @@
+<div class="m-5">
+
+    <div class="">
+        <h2> Team Ekle</h2>
+    </div>
+
+    <form class="example-form" [formGroup]="teamForm">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Team ID</mat-label>
+            <input matInput placeholder="Team Id" formControlName="teamId" [ngClass]="{'is-invalid': controls.teamId.errors && controls.teamId.touched}">
+            <small id="teamId" class="form-text text-muted" *ngIf="controls.teamId.errors?.required && controls.teamId.touched">
+                Lütfen team id alanını boş geçmeyiniz.
+            </small>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Team Name</mat-label>
+            <input matInput placeholder="Team Name" formControlName="teamName"[ngClass]="{'is-invalid': controls.teamName.errors && controls.teamName.touched}">
+            <small id="teamName" class="form-text text-muted" *ngIf="controls.teamName.errors?.required && controls.teamName.touched">
+                Lütfen team name alanını boş geçmeyiniz.
+            </small>
+        </mat-form-field>
+        
+    </form>
+    <button type="submit" class="addTeamBtn" (click)="addTeam()">Ekle</button>
+
+</div>

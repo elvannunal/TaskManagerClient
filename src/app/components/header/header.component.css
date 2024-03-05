@@ -1,0 +1,21 @@
+.headerWrapper {
+    border-bottom: 1.1px #DBDBDB solid;
+}
+.userSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.userSettingIcon {
+    height: 20px;
+}
+
+.userName {
+    padding-right: 15px;
+}
+.userRole{
+    font-weight: 600;
+    padding-left: 27px;
+}

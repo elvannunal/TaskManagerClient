@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="panel border bg-white">
+              
+                <div class="panel-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
+                        <div class="form-group">
+                            <label for="nameSurname">Ad Soyad</label>
+                            <input type="text" class="form-control" id="nameSurname" formControlName="nameSurname"
+                                placeholder="Ad Soyad" [ngClass]="{'is-invalid': component.nameSurname.errors}">
+                            <small id="nameSurname" class="form-text text-muted" *ngIf="component.nameSurname.errors?.required">
+                                Lütfen adı soyadı boş geçmeyiniz.
+                            </small>
+                            <small id="nameSurname" class="form-text text-muted"
+                             *ngIf="component.nameSurname.errors?.minLength || component.nameSurname.errors?.minLength">
+                                Ad Soyad en az 3 karakter en fazla 50 karakter olmalıdır.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">Kullanıcı Adı</label>
+                            <input type="text" class="form-control" id="userName" formControlName="userName"
+                                placeholder="Kullanıcı Adı"  [ngClass]="{'is-invalid': component.userName.errors}" >
+                                <small id="userName" class="form-text text-muted" *ngIf="component.userName.errors?.required">
+                                   Lütfen kullanıcı adı alanını boş geçmeyiniz.
+                                </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" formControlName="email"
+                                placeholder="Email" [ngClass]="{'is-invalid': component.email.errors}" >
+                                <small id="email" class="form-text text-muted" *ngIf="component.email.errors?.required">
+                                   Lütfen email alanını boş geçmeyiniz.
+                                </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Şifre</label>
+                            <input type="password" class="form-control" id="password"formControlName="password" placeholder="Şifre"
+                            [ngClass]="{'is-invalid': component.password.errors}" >
+                            <small id="password" class="form-text text-muted" *ngIf="component.password.errors?.required">
+                               Lütfen email alanını boş geçmeyiniz.
+                            </small>
+                            <small id="password" class="form-text text-muted" *ngIf="component.password.errors?.email">
+                                Email formatında yazılmalıdır!
+                             </small>
+                        </div>
+                        <button type="submit" class="buttonRegister">Kayıt Ol</button>
+                    </form>
+
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
