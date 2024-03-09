@@ -1,0 +1,6 @@
+::ng-deep #authorizeList {
+  max-height: 440px;
+}
+.dx-treelist-container>.dx-treelist-headers, .dx-treelist-container>.dx-treelist-rowsview {
+  background-color: #fff;
+}

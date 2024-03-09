@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { DxButtonModule, DxTextBoxModule } from 'devextreme-angular';
+import { DxButtonModule, DxTextBoxModule, DxTreeListModule } from 'devextreme-angular';
 import { TeamsModalComponent } from './components/teams-modal/teams-modal.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -61,6 +61,7 @@ import { UpdatePasswordComponent } from './components/update-password/update-pas
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
+    DxTreeListModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: () => localStorage.getItem("accessToken"),
