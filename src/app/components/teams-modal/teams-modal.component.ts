@@ -34,8 +34,6 @@ export class TeamsModalComponent {
       teamId: ['', Validators.required],
       teamName: ['', Validators.required],
     })
-
-
   }
 
   get controls() {
@@ -52,7 +50,7 @@ export class TeamsModalComponent {
   
       this.teamService.createTeam(createTeam).subscribe(
         (response) => {
-          console.log('Ekibiniz başarıyla eklendi:', response);  
+          console.log('Ekibiniz başarıyla eklendi:', Response);  
           this.dialogRef.close(); 
         },
         (error) => {

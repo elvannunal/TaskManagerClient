@@ -43,13 +43,15 @@
 
     </div>
 
-    <div class="teamsSection"(click)="openDialog()">
-         <p class="captionTeam">All Teams</p>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="plusIcon">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
+    <div class="teamsSection">
+        <p class="captionTeam">All Teams</p>
+        <div (click)="openDialog()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="plusIcon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+        </div>
     </div>
 
     <!-- <div class="allTeams">
@@ -82,7 +84,7 @@
                 <p [style.background-color]="colorCodes[i]" class="colorDots"></p>
                 <p class="teamName">{{ team.teamName }}</p>
             </div>
-        
+
 
             <div class="wrapperIcon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
